@@ -51,7 +51,6 @@ socketLib.socketRequest = function(msg)
             data = data .. bR
         end
         if bR == nil then
-            socket = nil
             return nil, "Lost connection while read answer"
         end
         i = i + 1
