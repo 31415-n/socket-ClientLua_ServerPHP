@@ -18,8 +18,6 @@ socket_set_nonblock($sock);
 
 $clients = [];
 
-// {"sr": "sr"}
-
 function send_data($client, $string)
 {
     socket_set_nonblock($client);
