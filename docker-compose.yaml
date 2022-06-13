@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  socket_server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: socket_test_server
+    restart: always
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./MAIN:/www
+    command: ["php", "/www/main.php"]
